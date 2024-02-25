@@ -1,0 +1,185 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.1.31)  13 FEB 2024 12:51
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Users/Asus/OneDrive/Documents/Operating Systems/HW/HW1/Installing Linux On VM.tex"
+(c:/Users/Asus/OneDrive/Documents/Operating Systems/HW/HW1/Installing Linux On VM.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count195
+\float@exts=\toks18
+\float@box=\box51
+\@float@everytoks=\toks19
+\@floatcapt=\box52
+) (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count196
+\l__pdf_internal_box=\box53
+) (Installing Linux On VM.aux)
+\openout1 = `"Installing Linux On VM.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+ (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count197
+\scratchdimen=\dimen143
+\scratchbox=\box54
+\nofMPsegments=\count198
+\nofMParguments=\count199
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count266
+\MPscratchDim=\dimen144
+\MPnumerator=\count267
+\makeMPintoPDFobject=\count268
+\everyMPtoPDFconversion=\toks21
+) (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\Asus\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 9.
+ [1
+
+{C:/Users/Asus/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<Pics/Download_Page.png, id=8, 386.6445pt x 434.8245pt>
+File: Pics/Download_Page.png Graphic file (type png)
+<use Pics/Download_Page.png>
+Package pdftex.def Info: Pics/Download_Page.png  used on input line 15.
+(pdftex.def)             Requested size: 386.64355pt x 434.82341pt.
+
+Overfull \hbox (41.64355pt too wide) in paragraph at lines 15--16
+ [][] 
+ []
+
+<Pics/New_Example.png, id=10, 552.26324pt x 56.00925pt>
+File: Pics/New_Example.png Graphic file (type png)
+<use Pics/New_Example.png>
+Package pdftex.def Info: Pics/New_Example.png  used on input line 24.
+(pdftex.def)             Requested size: 552.26189pt x 56.0091pt.
+
+Overfull \hbox (207.26189pt too wide) in paragraph at lines 24--25
+ [][] 
+ []
+
+[2 <./Pics/Download_Page.png>]
+<Pics/New_Window.png, id=16, 476.982pt x 281.25075pt>
+File: Pics/New_Window.png Graphic file (type png)
+<use Pics/New_Window.png>
+Package pdftex.def Info: Pics/New_Window.png  used on input line 31.
+(pdftex.def)             Requested size: 476.98082pt x 281.25005pt.
+
+Overfull \hbox (131.98082pt too wide) in paragraph at lines 31--32
+ [][] 
+ []
+
+<Pics/Next_1.png, id=17, 478.78876pt x 280.6485pt>
+File: Pics/Next_1.png Graphic file (type png)
+<use Pics/Next_1.png>
+Package pdftex.def Info: Pics/Next_1.png  used on input line 37.
+(pdftex.def)             Requested size: 478.78758pt x 280.64781pt.
+
+Overfull \hbox (133.78758pt too wide) in paragraph at lines 37--38
+ [][] 
+ []
+
+[3 <./Pics/New_Example.png> <./Pics/New_Window.png>] [4 <./Pics/Next_1.png>]
+<Pics/Hardware_Modification_Window.png, id=28, 480.5955pt x 284.86424pt>
+File: Pics/Hardware_Modification_Window.png Graphic file (type png)
+<use Pics/Hardware_Modification_Window.png>
+Package pdftex.def Info: Pics/Hardware_Modification_Window.png  used on input line 49.
+(pdftex.def)             Requested size: 480.59433pt x 284.86354pt.
+<Pics/Hardware_Modification_Window_Next.png, id=29, 479.99326pt x 283.65974pt>
+File: Pics/Hardware_Modification_Window_Next.png Graphic file (type png)
+<use Pics/Hardware_Modification_Window_Next.png>
+Package pdftex.def Info: Pics/Hardware_Modification_Window_Next.png  used on input line 50.
+(pdftex.def)             Requested size: 479.99208pt x 283.65904pt.
+
+Overfull \hbox (135.59433pt too wide) in paragraph at lines 49--51
+ [][] 
+ []
+
+
+Overfull \hbox (134.99208pt too wide) in paragraph at lines 49--51
+ [] 
+ []
+
+[5]
+Overfull \vbox (43.46703pt too high) has occurred while \output is active []
+
+ [6 <./Pics/Hardware_Modification_Window.png> <./Pics/Hardware_Modification_Window_Next.png>] [7] (Installing Linux On VM.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1418 strings out of 474542
+ 24721 string characters out of 5744918
+ 1926978 words of memory out of 5000000
+ 23679 multiletter control sequences out of 15000+600000
+ 562351 words of font info for 50 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,7n,65p,462b,216s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Asus\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Asus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Asus/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on "Installing Linux On VM.pdf" (7 pages, 435700 bytes).
+PDF statistics:
+ 64 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+
