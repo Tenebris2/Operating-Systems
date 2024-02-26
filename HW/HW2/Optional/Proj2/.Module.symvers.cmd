@@ -1,0 +1,1 @@
+savedcmd_/home/tenebris/Documents/Operating-Systems/HW/HW2/Proj2/Module.symvers :=  scripts/mod/modpost -m -a      -o /home/tenebris/Documents/Operating-Systems/HW/HW2/Proj2/Module.symvers -T /home/tenebris/Documents/Operating-Systems/HW/HW2/Proj2/modules.order -i Module.symvers -e 
