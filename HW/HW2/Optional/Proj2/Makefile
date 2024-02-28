@@ -1,6 +1,6 @@
 # Makefile
 
-obj-m = task_kernel.o
+obj-m = task_kernel_dfs.o
 all:
 	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules
 clean:
