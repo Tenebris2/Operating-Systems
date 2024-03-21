@@ -1,0 +1,175 @@
+{
+  "main": {
+    "id": "56e688be27f0a4c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "273b5ee2d89bba05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60fa1326db515498",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "122da58a552ff54d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca19a30dfa24b34c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7c91eba4e3fa78e9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "4c316ba2032537d2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bfe91cb4922d4dcc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "right": {
+    "id": "bab021449f8161e5",
+    "type": "split",
+    "children": [
+      {
+        "id": "4afc5c2ac7d56b06",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8c046c7bdf8d70e1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f5f911ccddbbe536",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c04837215e3e552a",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "HW/HW5/06-Deadlock.pdf"
+              }
+            }
+          },
+          {
+            "id": "8769f52ef24860db",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0e41f382d709f09e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 570.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "60fa1326db515498",
+  "lastOpenFiles": [
+    "HW/HW5/Notes/Deadlock.md",
+    "Pasted image 20240311114940.png",
+    "Pasted image 20240311104416.png",
+    "HW/HW5/Deadlock.pdf",
+    "HW/HW5/06-Deadlock.pdf",
+    "Pasted image 20240311104022.png",
+    "HW/HW4/HomeWork/note.pdf",
+    "HW/HW5/Notes",
+    "HW/HW5",
+    "HW/HW4/HomeWork/note.md",
+    "2024-03-10.md",
+    "Untitled.canvas",
+    "HW/HW4/W4/note.md",
+    "HW/HW4/W4/05-Synchronization.pdf",
+    "HW/HW1/Pics/Hardware_Modification_Window.png",
+    "HW/HW1/Pics/Hardware_Modification_Window_Next.png",
+    "Operating System Concepts 9th Edition.pdf",
+    "2024-03-09.md",
+    "HW/HW1/Pics/Download_Page.png",
+    "HW/HW1/Installing Linux On VM.pdf"
+  ]
+}
