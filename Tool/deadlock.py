@@ -4,6 +4,7 @@ from Data import *
 DATA_LEN = 3
 PATH = "data.txt"
 
+# banker as a function for resource request
 def banker(allocation, need, available):
 
     work = available
@@ -21,14 +22,27 @@ def banker(allocation, need, available):
                 print(f'Index: {i} - Need: {need[i]} - Work: {work}')
 
         if (all(element == finish[0] for element in finish)):
-            print(work)
+            print(f"Work:  {work}")
             return True
         
         if(not can_alloc):
             return False
-
-def resource_request(request, index, path): 
+        
+# Use for when only requiring banker or need
+def banker_default(path):
     data = get_data_for_resource_request(path)
+
+    allocation = data[0]
+    need = data[1]
+    available = data[2]
+
+    return banker(allocation, need, available)
+
+# Needs base for index adjustment
+def resource_request(request, index, base, path): 
+    data = get_data_for_resource_request(path)
+
+    index -= base
 
     allocation = data[0]
     need = data[1]
@@ -41,6 +55,7 @@ def resource_request(request, index, path):
         need[index] = [x - y for x, y in zip(need[index], request)]
 
         print(f'Request: {request} - Index: {index} \nNew Need: {need[index]} - New Available: {available} - New Allocation: {allocation[index]}')
+        print()
         if (banker(allocation, need, available)):
             return True
     

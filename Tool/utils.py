@@ -1,12 +1,24 @@
+from Process import * 
 # read file as pid - arrival time - burst time 
 def read(file_path):
     data = []
     with open(file_path, 'r') as file:
         for line in file:
-            subdata = [int(char) for char in line.split()]
+            subdata = [float(char) for char in line.split()]
             data.append(subdata)
     return data
 
+def read_processes(file_path):
+    data = read("data.txt")
+
+    processes = []
+
+    for item in data:
+        process = Process(*item, 0, 0, 0, 0, 0)
+        process.remaining_time = process.burst_time
+        processes.append(process)
+
+    return processes
 
 def calculate(data, gantchart_data):
     # waiting time = tat - burst time; tat = completion time - arrival time;
@@ -26,13 +38,28 @@ def calculate(data, gantchart_data):
         process.response_time = first_time - process.arrival_time
 
 def draw(data):
-    for process in data:
+    check = True
+
+    new_data = []
+
+    for i in range(len(data) - 1):
+        if (data[i][0] != data[i+1][0]):
+            new_data.append((data[i][0], data[i][1]))
+    
+    new_data.append((data[len(data) - 1][0], data[len(data) - 1][1]))
+
+    for process in new_data:
         print(f"| {'':>{1}} I:{process[0]:<{1}} ", end="")
     print("|")
-    for process in data:
+    for process in new_data:
         print(f"| {'':>{1}} T:{process[1]:<{0}} ", end="")
 
     print("|")
+
+    context_switches = len(new_data)
+
+    return context_switches
+
 def log(processes, chart):
     calculate(processes, chart)
 
@@ -43,7 +70,6 @@ def log(processes, chart):
 
     for data in processes:
         print(f'PID: {data.pid}, Arrival: {data.arrival_time}, Burst: {data.burst_time}, Completion: {data.completed_time}, WT: {data.waiting_time}, Turnaround: {data.turnaround_time}, Response: {data.response_time}')
-        print('---------------------------------------------------------------------------------')
 
         completion_average += data.completed_time
         tat_average += data.turnaround_time
@@ -55,5 +81,11 @@ def log(processes, chart):
     print(f"Waiting Time Average: {waiting_time_average / len(processes)}")
     print(f"Response Time Average: {response_time_average / len(processes)}")
 
-    draw(chart)
+    print(f'Context switches: {draw(chart)}')
 
+def cmp(request, needi):
+    for i in range(len(request)):
+        if (request[i] > needi[i]):
+            return False
+    
+    return True

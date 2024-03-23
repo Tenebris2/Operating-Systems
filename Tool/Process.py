@@ -2,14 +2,15 @@ from dataclasses import dataclass
 
 @dataclass
 class Process:
-    pid : int
-    arrival_time : int
-    burst_time : int
-    completed_time : int 
-    remaining_time : int  
-    waiting_time : int
-    turnaround_time : int
-    response_time: int
+    pid : float
+    burst_time : float
+    arrival_time : float
+    priority: float
+    completed_time : float
+    remaining_time : float  
+    waiting_time : float
+    turnaround_time : float
+    response_time: float
     def __lt__(self, other):
         # Define the comparison based on burst time
         return self.burst_time < other.burst_time

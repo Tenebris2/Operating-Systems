@@ -7,6 +7,7 @@ def get_data_for_resource_request(path):
             data.append(elements)
     resources = data[0]
     length = int(len(data[1]) / 2)
+    
     allocation = [sub_array[:length] for sub_array in data][1:]
     max = [sub_array[length:] for sub_array in data][1:]
 
@@ -15,7 +16,7 @@ def get_data_for_resource_request(path):
         for j in range(len(allocation)):
             max_allocation[i] += allocation[j][i]
 
-    available = [0] * 3
+    available = [0] * len(resources)
     for i in range(len(resources)):
         available[i] = resources[i] - max_allocation[i]
 
@@ -29,6 +30,12 @@ def get_data_for_resource_request(path):
     data = []
     data.extend([allocation, need, available])
 
+    print("Need:")
+
+    for i in range(len(allocation)):
+        print(f"{i} - {need[i]}")
+
+    print()
     return data
 
 def get_data_for_detection(path):
