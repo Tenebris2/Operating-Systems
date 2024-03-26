@@ -10,23 +10,40 @@ def banker(allocation, need, available):
     work = available
     finish = [False] * len(allocation)
 
+    data = []
+
+    result = 0
+
+    safe_list = ""
+
+    unsafe_process = 0
+
     while True:
         can_alloc = False
 
         for i in range(len(finish)):
-            if (finish[i] == False and cmp(need[i], work)):
-                work = [x + y for x, y in zip(work, allocation[i])]
-                finish[i] = True 
-                can_alloc = True
+            if (finish[i] == False):
+                
+                data.append((str(i), append(need[i]), append(work), str(cmp(need[i], work))))
 
-                print(f'Index: {i} - Need: {need[i]} - Work: {work}')
+                if (cmp(need[i], work)):
+                    work = [x + y for x, y in zip(work, allocation[i])]
+                    finish[i] = True 
+                    can_alloc = True
+                    safe_list += (str(i) + ',')
 
-        if (all(element == finish[0] for element in finish)):
-            print(f"Work:  {work}")
-            return True
+        if(can_alloc == False):
+            result = -1
+            unsafe_process = i
+            break
         
-        if(not can_alloc):
-            return False
+        if (all(element == finish[0] for element in finish)):
+            result = 1
+            break
+
+
+
+    return (data, result, safe_list, unsafe_process)
         
 # Use for when only requiring banker or need
 def banker_default(path):
@@ -56,36 +73,40 @@ def resource_request(request, index, base, path):
 
         print(f'Request: {request} - Index: {index} \nNew Need: {need[index]} - New Available: {available} - New Allocation: {allocation[index]}')
         print()
-        if (banker(allocation, need, available)):
+        if (banker(allocation, need, available)[1] == 1):
             return True
     
     return False
 
-def detection(path):
-    data = get_data_for_detection(path)
+def detection(data):
     allocation = data[0]
     request = data[1]
     work = data[2]
     finish = [False] * len(allocation)
-
+    safe_list = ""
+    data = []
     while True:
         can_alloc = False
 
-        for i in range(len(finish)):
-            if (finish[i] == False and cmp(request[i], work)):
-                finish[i] = True 
-                can_alloc = True
+        for i in range(len(finish)):        
+            if (finish[i] == False):
+                data.append((str(i), append(allocation[i]), append(request[i]),append(work), str(cmp(request[i], work))))
 
-                work = [x + y for x, y in zip(work, allocation[i])]
+                if(cmp(request[i], work)):
+                    finish[i] = True 
+                    can_alloc = True
 
-                print(f'Index: {i} - Request: {request[i]} - Work: {work}')
+                    work = [x + y for x, y in zip(work, allocation[i])]
 
-        if (all(element == finish[0] for element in finish)):
-            return True
-        
+                    safe_list += str(i)
+
         if(not can_alloc):
             for i in range(len(finish)):
                 if (finish[i] == False):
                     print(f'p{i} is deadlocked')
-            return False
+            return (i, False, safe_list)
+        
+        if (all(element == finish[0] for element in finish)):
+            return (data, True, safe_list)
+        
         

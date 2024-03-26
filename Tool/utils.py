@@ -1,24 +1,4 @@
 from Process import * 
-# read file as pid - arrival time - burst time 
-def read(file_path):
-    data = []
-    with open(file_path, 'r') as file:
-        for line in file:
-            subdata = [float(char) for char in line.split()]
-            data.append(subdata)
-    return data
-
-def read_processes(file_path):
-    data = read("data.txt")
-
-    processes = []
-
-    for item in data:
-        process = Process(*item, 0, 0, 0, 0, 0)
-        process.remaining_time = process.burst_time
-        processes.append(process)
-
-    return processes
 
 def calculate(data, gantchart_data):
     # waiting time = tat - burst time; tat = completion time - arrival time;
@@ -52,13 +32,13 @@ def draw(data):
         print(f"| {'':>{1}} I:{process[0]:<{1}} ", end="")
     print("|")
     for process in new_data:
-        print(f"| {'':>{1}} T:{process[1]:<{0}} ", end="")
+        print(f"| {'':>{1}} T:{process[1] + 1:<{0}} ", end="")
 
     print("|")
 
     context_switches = len(new_data)
 
-    return context_switches
+    return context_switches - 1
 
 def log(processes, chart):
     calculate(processes, chart)
@@ -89,3 +69,9 @@ def cmp(request, needi):
             return False
     
     return True
+
+def append(data):
+    tmp = ""
+    for e in data:
+        tmp += str(e)
+    return tmp

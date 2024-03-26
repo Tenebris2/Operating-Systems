@@ -1,8 +1,7 @@
 from queue import Queue, PriorityQueue
 from Process import * 
 from utils import *
-
-
+from Data import *
 
 def fcfs(processes):
     print("First Come First Served")
@@ -83,6 +82,7 @@ def sjf_preemptive(processes):
     chart = []
 
     completed = 0
+
     n = len(processes)
     
     minimum_time = 99999
@@ -140,14 +140,11 @@ def round_robin(processes, quantum):
     chart = []
     completed = 0
     n = len(processes)
-    
-    remaining_time = quantum
 
     check_if_processes_in_time_range = True
 
-    index_of_current_process = 0
+    queue = Queue()
 
-    switches = 0
     while completed != n:
 
         check_if_processes_in_time_range = False
@@ -167,7 +164,6 @@ def round_robin(processes, quantum):
                     processes[i].remaining_time = 0
                     chart.append((processes[i].pid, time))
 
-                switches += 1
                 if (processes[i].remaining_time <= 0):
 
                     completed += 1
@@ -222,3 +218,56 @@ def priority_non_preemptive(processes, priority_order):
         chart.append((current_process.pid, current_process.completed_time))
 
     log(result, chart)
+
+def priority_preemptive(processes):
+    print("Priority Preemptive")
+
+    time = 0
+    result = []
+    chart = []
+
+    completed = 0
+    n = len(processes)
+    
+    prio = 99999
+
+    check_if_processes_in_time_range = True
+
+    index_of_current_process = -1
+
+    switches = -1
+
+    index_of_previous_process = -1
+    
+    while completed != n:
+
+        for i in range(n):
+            if ((processes[i].arrival_time <= time) and (processes[i].priority < prio and processes[i].remaining_time > 0)):
+                prio = processes[i].priority
+
+                check_if_processes_in_time_range = True
+
+                index_of_previous_process = index_of_current_process
+
+                index_of_current_process = i
+
+        if (check_if_processes_in_time_range == False):
+            time += 1
+            print(time)
+            continue
+    
+        if (processes[index_of_current_process].remaining_time <= 0):
+
+            completed += 1
+
+            processes[index_of_current_process].completed_time = time + 1
+
+            check_if_processes_in_time_range = False
+
+        chart.append((processes[index_of_current_process].pid, time))
+
+        time += 1
+
+
+    log(processes, chart[1:])
+

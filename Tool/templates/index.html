@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <script src="/static/js/script.js"></script>
+    <title>Deadlock Simulator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Deadlock Simulator</h1> 
+        <form action="/" method="POST" enctype="multipart/form-data" id="form-data">
+            <div>
+                <div class="algorithm">
+                    <label for="algorithm">Algorithm:</label>
+                    <select id="algorithm" name="algorithm" class="form-interactives" onChange="getAlgo(this);">
+                        <option value="banker">Banker's Algorithm</option>
+                        <option value="detection">Deadlock Detection Algorithm</option>
+                    </select>
+                </div>
+                <div id="request" style="display: none;">
+                    <label for="request-input">Request Input:</label>
+                    <input type="text" id="request-input" placeholder="eg. 1 2 3 4">
+                    <input type="number" id="request-input-index" placeholder="Process Number">
+                </div>
+            </div>
+                <div class="file_upload">
+                    <label for="file">Upload Data File (CSV):</label>
+                    <input type="file" id="file" name="file" class="form-interactives"> </div>
+                <div class="submit">
+                    <input type="submit" value="Simulate" class="form-interactives">
+                </div>
+            </form>
+            <div class="table-1">
+                <table>
+                    <tr>
+                        {% for header in table_1_headings %}
+                        <th>{{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for row in table_1_data %}
+                        <td>{{ row }}</td>
+                    {% endfor %}
+                </table>
+            </div>
+                <div class="table-2">
+                    <table>
+                        <tr>
+                            {% for header in table_2_headings %}
+                            <th>{{ header }}</th>
+                            {% endfor %}
+                        </tr>
+                        {% for row in table_2_data %}
+                            <tr>
+                                {% for cell in row %}
+                                <td>
+                                    {{ cell }}  
+                                </td>  
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+                
+                <div class="table-3">
+                    <table>
+                    <tr>
+                        {% for header in table_3_headings %}
+                        <th>{{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                    {% for row in table_3_data%}
+                    <tr>
+                        {% for cell in row %}
+                        <td>
+                            {{ cell }}  
+                        </td>  
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </table>
+            </div>
+            <div class="conclusion-paragraph">
+                {{conclusion_paragraph}}
+            </div>
+    </div>
+</body>
+</html>
