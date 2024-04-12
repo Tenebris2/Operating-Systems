@@ -1,4 +1,7 @@
+from Process import *
+
 def get_data_for_resource_request(path):
+
     data = []
 
     with open(path, "r") as file:
@@ -74,7 +77,8 @@ def read(file_path):
             data.append(subdata)
     return data
 
-def read_processes(file_path):
+def read_processes(file_pa
+                   ):
     data = read("data.txt")
 
     processes = []

@@ -1,5 +1,6 @@
 import deadlock
 import CPUScheduling
+from Process import *
 from utils import *
 from priority import *
 from Data import *
@@ -14,7 +15,7 @@ PATH = 'data.txt'
 # fcfs, sjf_non_preemptive, sjf_preemptive, round_robin, priority_non_preemptive
 
 #Commands:
-#CPUScheduling.sjf_preemptive(read_processes(PATH))
+CPUScheduling.sjf_preemptive(read_processes(PATH))
 # CPUScheduling.fcfs(read_processes(PATH))
 # CPUScheduling.round_robin(read_processes(PATH), 2)
 #CPUScheduling.priority_non_preemptive(read_processes(PATH))
@@ -24,8 +25,8 @@ PATH = 'data.txt'
 
 
 
-print(deadlock.resource_request([0,0,0,0], 0, 0, PATH))
-print(deadlock.banker_default(PATH))
+# print(deadlock.resource_request([0,0,0,0], 0, 0, PATH))
+# print(deadlock.banker_default(PATH))
 # print(deadlock.detection(PATH))
 
 

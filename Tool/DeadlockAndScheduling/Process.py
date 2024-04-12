@@ -5,7 +5,7 @@ class Process:
     pid : float
     arrival_time : float
     burst_time : float
-    # priority: float
+    priority: float
     completed_time : float
     remaining_time : float  
     waiting_time : float
