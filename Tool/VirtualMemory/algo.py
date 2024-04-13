@@ -1,101 +1,107 @@
 from queue import Queue
 from LRUCache import *
-FRAMES = 2
+from utils import *
+frames = 2
 HIT = 0
 
 
-def get_data():
-    f = open('data.txt')
-    data = [int(x) for x in f.read().strip().split(' ')]
 
-    return data
+def FIFO(data, frames):
+    res = []
 
-def get(q, size):
-    arr = []
-    for i in range(size):
-        tmp = q.get()
-
-        arr.append(tmp)
-        
-        q.put(tmp)
-
-    return q,arr
-
-def contains(ar, e):
-    check = False
-
-    for i in range(len(ar)):
-        if ar[i] == e:
-            check = True
-    
-    return check
-
-def FIFO(data):
-    HIT = 0
+    HIT, flag = 0, 0
 
     q = Queue()
 
-    for i in range(FRAMES):
-        q.put(None)
+    for i in range(frames):
+        q.put(-1)
 
     for i in range(len(data)):
         e = data[i]
 
-        q, temp = get(q, FRAMES)
+        q, temp = get(q, frames)
 
         if contains(temp, e):
-            print(temp, end='')
-
-            print(f' - {e} - HIT')
             
             HIT += 1
 
-            continue
+            flag = 1
+        else:
+            q.get()
 
-        q.get()
+            q.put(e)
 
-        q.put(e)
+            q, temp = get(q, frames)
 
-        q, temp = get(q, FRAMES)
+            flag = -1
+        
+        temp.append(flag)
+        res.append(temp)
 
-        print(temp, end='')
-        print(f' - {e} - MISS')
     
     MISS = len(data) - HIT
-    print(f"Number of hits: {HIT}({(HIT / len(data)) * 100}%), Number of misses: {MISS}({(MISS / len(data)) * 100}%)")
 
+    return res, HIT, MISS
 
-def LRU(data):
-    cache = LRUCache(FRAMES)
+def LRU(data, frames):
+    res = []
 
-    HIT = 0
+    cache = LRUCache(frames)
+
+    HIT, flag = 0, 0
+
     for e in data:
         check = False
         if cache.get(e) >= 0:
             HIT += 1
-            check = True
+            flag = 1
         else:
             cache.put(e, e)
+            flag = -1
 
-        if check:
-            print('HIT at', end='')
-        else:
-            print('Miss at', end='')
-
-        print(f" page {e}")
-
-        cache.printlog()
+        tmp_cache = cache.get_current_cache()
+        tmp_cache.append(flag)
+        res.append(tmp_cache)
 
     MISS = len(data) - HIT
 
-    print(f"Number of hits: {HIT}({(HIT / len(data)) * 100}%), Number of misses: {MISS}({(MISS / len(data)) * 100}%)")
+    # print(f"Number of hits: {HIT}({(HIT / len(data)) * 100}%), Number of misses: {MISS}({(MISS / len(data)) * 100}%)")
 
+    return res, HIT, MISS
 
-def OPT(data):
+def OPT(data, frames):
+    HIT, flag = 0, 0
+    mset, res = [], []
+
     for i in range(len(data)):
-        
+        if data[i] in mset:
+            HIT += 1
+            flag = 1
+        else:
+            flag = -1
+
+            if len(mset) >= frames:
+                mset[farthest(mset, i, data)] = data[i]
+            else:
+                mset.append(data[i])
+
+        tmpset = mset.copy()
+
+        if (len(tmpset) < frames):
+            for j in range(frames - len(tmpset)):
+                tmpset.append(-1)     
+
+        tmpset.append(flag)
+
+        res.append(tmpset)
+
+
+    MISS = len(data) - HIT
+    # print(f"Number of hits: {HIT}({(HIT / len(data)) * 100}%), Number of misses: {MISS}({(MISS / len(data)) * 100}%)")
+
+    return res, HIT, MISS
+
 if __name__ == "__main__":
     data = get_data()
 
-    FIFO(data)
-    LRU(data)
+    OPT(data, 3)

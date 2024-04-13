@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+h1 {
+    font-family: 'Comfortaa';
+}
+#form-data {
+    font-family: 'Comfortaa';
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+body {
+	padding:0;
+	margin:0;
+    font-size: 1.5em;
+    background-color: rgb(212, 244, 255);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+    border: 1px solid rgb(20, 111, 142);
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 800px;
+    min-height: 200px;
+    border-collapse: collapse;
+    padding:10px;
+    table-layout: fixed;
+
+}
+
+.table tr {
+    text-align: center;
+}
+
+.table td{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(168, 235, 255);
+    border-collapse: collapse;
+    padding: .5em;
+    min-width: 40px;
+
+}
+
+.table th{
+    background-color: rgb(20, 111, 142);
+    color: #fff;
+}
+
+.table {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.wrapper {
+    padding: 5px;
+    max-width: 1450px;
+    width: 95%;
+    margin:10px auto;
+}
+
+.form-interactives{
+    margin: 5px;
+    font-family: 'Comfortaa';
+    border: none;
+    display: flex;
+    padding: 0.5rem 1rem;
+    background-color: rgb(34, 174, 221);
+    color: #000000;
+    line-height: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    user-select: none;
+    gap: 0.75rem;
+    box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+    transition: all .6s ease;
+}
+
+.form-interactives:hover {
+    box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+
+.form-interactives:focus, .form-interactives:active {
+        opacity: .85;
+        box-shadow: none;
+}
+
+.data-form {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.7em;
+}
+
+.data-form input {
+    width: 100%;
+    padding: 0.2px;
+    border: 1px solid rgb(20, 111, 142);
+    border-radius: 5px;
+    outline: none;
+    color: black;
+}
+
+#algo-data-form {
+    width: 300px;
+    font-size: 0.8em;
+
+}
+.data-form span {
+    position: absolute;
+    left: 0
+}

@@ -44,8 +44,14 @@ class LRUCache:
             self.remove(lru)
             del self.cache[lru.key]
 
-    def printlog(self):
-        print("[", end="")
+    def get_current_cache(self):
+        cache_as_list = []
         for key, data in self.cache.items():
-            print(f"{key}, ", end="")
-        print("]")
+            cache_as_list .append(key)
+
+        if (len(cache_as_list) < self.capacity):
+            for i in range(self.capacity - len(cache_as_list)):
+                cache_as_list.append(-1)
+
+        print(cache_as_list)
+        return cache_as_list 
