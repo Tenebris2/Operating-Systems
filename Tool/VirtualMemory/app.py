@@ -41,7 +41,38 @@ def index():
             headings = data
 
             algorithm = "LRU"
+        elif algo=='mru':
+            algo_data, HIT, MISS = MRU(data, frames)
 
+            algo_data = transform_data(algo_data)
+
+            headings = data
+
+            algorithm = "MRU"  
+        elif algo=="lfu":
+            algo_data, HIT, MISS = LFU(data, frames)
+
+            algo_data = transform_data(algo_data)
+
+            headings = data
+
+            algorithm = "LFU"
+        elif algo=="mfu":
+            algo_data, HIT, MISS = MFU(data, frames)
+
+            algo_data = transform_data(algo_data)
+
+            headings = data
+
+            algorithm = "MFU"   
+        elif algo=="sc":
+            algo_data, HIT, MISS = SecondChance(data, frames)
+
+            algo_data = transform_data(algo_data)
+
+            headings = data
+
+            algorithm = "Second Chance"                            
         elif algo=='opt':
             algo_data, HIT, MISS = OPT(data, frames)
 

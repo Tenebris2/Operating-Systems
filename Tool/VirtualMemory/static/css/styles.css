@@ -33,14 +33,19 @@ table {
     text-align: center;
 }
 
+.table td:hover {
+    opacity: 50%;
+    cursor: pointer; /* Optional: Change cursor style on hover */
+}
 .table td{
     border: 1px solid rgb(0, 0, 0);
     background-color: rgb(168, 235, 255);
     border-collapse: collapse;
     padding: .5em;
     min-width: 40px;
-
+    transition: background-color 0.8s ease-in-out 0.2s; /* Transition duration, timing function, and delay */
 }
+
 
 .table th{
     background-color: rgb(20, 111, 142);

@@ -14,13 +14,17 @@
                     <select id="algorithm" name="algorithm" class="form-interactives">
                         <option value="fifo">First-In-First-Out</option>
                         <option value="lru">Least Recently Used</option>
+                        <option value="mru">Most Recently Used</option>
+                        <option value="lfu">Least Frequently Used</option>
+                        <option value="mfu">Most Frequently Used</option>
+                        <option value="sc">Second Chance</option>
                         <option value="opt">Optimized</option>
                     </select>
                 </div>
                 <div id="request">
                     <label for="request-input">Request Input:</label>
                     <input type="text" class="data-form" id="algo-data-form" name="data" placeholder="Eg. 1 2 3 4" value="{{org_data}}">
-                    <input type="number" class="data-form" name="frames" placeholder="Frame" value="{{org_frames}}">
+                    <input type="number" class="data-form" name="frames" placeholder="Frame" value="{{org_frames}}" min="0">
                 </div>
                 <div class="submit">
                     <input type="submit" id="submit" value="Simulate" class="form-interactives">
@@ -68,6 +72,9 @@
                     for (var j = 1; j < rows.length; j++) {
                         var currentCell = rows[j].cells[i]
                         
+                        if (currentCell.innerHTML == -1) {
+                            currentCell.style.color = "transparent"
+                        }
                         if (currentCell.innerHTML === headerCell.innerHTML) {
                             if (flagCell.innerHTML == 1) {
                                 currentCell.style.backgroundColor = "green"
