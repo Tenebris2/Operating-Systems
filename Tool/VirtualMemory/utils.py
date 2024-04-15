@@ -1,5 +1,5 @@
 from queue import PriorityQueue
-
+import random
 def get_data():
     f = open('data.txt')
     data = [int(x) for x in f.read().strip().split(' ')]
@@ -80,3 +80,7 @@ def update_frequencies(page_dict, pq, size):
         newpq.put(updated)
 
     return newpq
+
+def randomizer(size):
+    for i in range(size):
+        print(random.randint(0, 10), end=' ')

@@ -18,8 +18,11 @@ def index():
             return render_template("index.html")
         
         frames = int(org_frames.strip()) if org_frames.isnumeric() else 1
-        data = [int(num) for num in org_data.strip().split(' ') if num.isnumeric()]
-
+        if (org_data.find(',') >= 0):
+            data = [int(num) for num in org_data.strip().split(',')]
+        else:
+            data = [int(num) for num in org_data.strip().split(' ')]
+   
         HIT = 0
         MISS = 0
         algorithm = ""
@@ -84,7 +87,7 @@ def index():
         HIT_RATIO = round((HIT / len(data)), 2) * 100
         MISS_RATIO = round((MISS / len(data)), 2) * 100
         return render_template('index.html', headings=headings, data=algo_data, org_data=org_data, org_frames=org_frames,
-                                HIT=HIT, MISS=MISS, HIT_RATIO = HIT_RATIO, MISS_RATIO = MISS_RATIO, algorithm=algorithm)       
+                                HIT=HIT, MISS=MISS, HIT_RATIO = HIT_RATIO, MISS_RATIO = MISS_RATIO, algorithm=algorithm, frames=org_frames)       
         
     else:
         return render_template('index.html')

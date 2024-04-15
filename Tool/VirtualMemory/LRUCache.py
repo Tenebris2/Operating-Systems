@@ -53,5 +53,4 @@ class LRUCache:
             for i in range(self.capacity - len(cache_as_list)):
                 cache_as_list.append(-1)
 
-        print(cache_as_list)
         return cache_as_list 
